@@ -1,10 +1,1 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><link rel="stylesheet" href="./styles.min.css"><script type="module" src="./core.min.js"></script><script type="module" src="./radio-group.min.js"></script></head><body><main><h1>Radio Group</h1><form id="form1"><ui-radio-group name="group1" label="select label"><ui-radio value="radio1a">Radio 1a</ui-radio><ui-radio value="radio1b">Radio 1b</ui-radio><ui-radio value="radio1c">Radio 1c</ui-radio></ui-radio-group><input type="submit" value="Submit"></form><ui-radio-group name="group2" orientation="vertical" label="Horizontal label"><ui-radio value="radio2a">Radio 2a</ui-radio><ui-radio value="radio2b">Radio 2b</ui-radio><ui-radio value="radio2c">Radio 2c</ui-radio></ui-radio-group></main><script>document.getElementById('form1').addEventListener('submit', function (event) {
-
-            event.preventDefault();
-            const radioGroup = document.querySelector('ui-radio-group');
-            if (!radioGroup.updateValidity()) {
-                return;
-            }
-
-            const formData = new FormData(event.target);
-        });</script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><link rel="stylesheet" href="./styles.min.css"><script type="module" src="./core.min.js"></script><script type="module" src="./radio-group.min.js"></script></head><body><main><h1>Radio Group</h1><form id="form1"><ui-radio-group name="group1" label="select label"><ui-radio value="radio1a">Radio 1a</ui-radio><ui-radio value="radio1b">Radio 1b</ui-radio><ui-radio value="radio1c">Radio 1c</ui-radio></ui-radio-group><input type="submit" value="Submit"></form><ui-radio-group name="group2" orientation="vertical" label="Horizontal label"><ui-radio value="radio2a">Radio 2a</ui-radio><ui-radio value="radio2b">Radio 2b</ui-radio><ui-radio value="radio2c">Radio 2c</ui-radio></ui-radio-group></main></body></html>
