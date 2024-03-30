@@ -1,0 +1,325 @@
+:not(:defined) {
+  visibility: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* line-height: 1.5; */
+  font-family: sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@media screen and (min-width: 640px) {
+  [hide-up="sm"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  [hide-down="sm"] {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  [hide-up="md"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  [hide-down="md"] {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  [hide-up="lg"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  [hide-down="lg"] {
+    display: none;
+  }
+}
+
+:root {
+  --ui-color-gray-50: hsl(0 0% 97.5%);
+  --ui-color-gray-100: hsl(240 4.8% 95.9%);
+  --ui-color-gray-200: hsl(240 5.9% 90%);
+  --ui-color-gray-300: hsl(240 4.9% 83.9%);
+  --ui-color-gray-400: hsl(240 5% 64.9%);
+  --ui-color-gray-500: hsl(240 3.8% 46.1%);
+  --ui-color-gray-600: hsl(240 5.2% 33.9%);
+  --ui-color-gray-700: hsl(240 5.3% 26.1%);
+  --ui-color-gray-800: hsl(240 3.7% 15.9%);
+  --ui-color-gray-900: hsl(240 5.9% 10%);
+  --ui-color-gray-950: hsl(240 7.3% 8%);
+
+  --ui-color-red-300: hsl(0 93.5% 81.8%);
+  --ui-color-red-600: hsl(0 72.2% 50.6%);
+  --ui-color-red-800: hsl(0 70% 35.3%);
+
+  --ui-color-orange-300: hsl(30.7 97.2% 72.4%);
+  --ui-color-orange-600: hsl(20.5 90.2% 48.2%);
+  --ui-color-orange-800: hsl(15 79.1% 33.7%);
+
+  --ui-color-green-300: hsl(141.7 76.6% 73.1%);
+  --ui-color-green-600: hsl(142.1 76.2% 36.3%);
+  --ui-color-green-800: hsl(142.8 64.2% 24.1%);
+
+  --ui-color-blue-300: hsl(199.4 95.5% 73.9%);
+  --ui-color-blue-600: hsl(200.4 98% 39.4%);
+  --ui-color-blue-800: hsl(201 90% 27.5%);
+
+  --ui-color-primary-200: hsl(200.6 94.4% 86.1%);
+  --ui-color-primary-300: hsl(199.4 95.5% 73.9%);
+  --ui-color-primary-400: hsl(198.4 93.2% 59.6%);
+  --ui-color-primary-500: hsl(198.6 88.7% 48.4%);
+  --ui-color-primary-600: hsl(200.4 98% 39.4%);
+  --ui-color-primary-700: hsl(201.3 96.3% 32.2%);
+  --ui-color-primary-800: hsl(201 90% 27.5%);
+
+  --ui-border-radius-1: 0.125rem;
+  --ui-border-radius-2: 0.25rem;
+  --ui-border-radius-3: 0.5rem;
+  --ui-border-radius-4: 1rem;
+  --ui-border-radius-circle: 50%;
+  --ui-border-radius-pill: 9999px;
+
+  --ui-shadow-1: 0 1px 2px hsl(240 3.8% 46.1% / 6%);
+  --ui-shadow-2: 0 1px 2px hsl(240 3.8% 46.1% / 12%);
+  --ui-shadow-3: 0 2px 4px hsl(240 3.8% 46.1% / 12%);
+
+  --ui-space-1: 0.125rem;
+  --ui-space-2: 0.25rem;
+  --ui-space-3: 0.375rem;
+  --ui-space-4: 0.5rem;
+  --ui-space-5: 0.75rem;
+  --ui-space-6: 1rem;
+  --ui-space-7: 1.25rem;
+  --ui-space-8: 1.75rem;
+  --ui-space-9: 2.25rem;
+  --ui-space-10: 2.75rem;
+  --ui-space-11: 3rem;
+  --ui-space-12: 4.5rem;
+
+  --ui-font-sans: system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif;
+
+  --ui-z-index-100: 100;
+  --ui-z-index-200: 200;
+  --ui-z-index-300: 300;
+  --ui-z-index-important: 2147483647;
+
+  --ui-focus-ring: var(--ui-color-primary-500) solid 2px;
+  --ui-focus-ring-offset: 2px;
+
+  --ui-line-height: calc(2px + 2ex + 2px);
+  --ui-font-size-6: clamp(2.4883rem, -1.0705rem + 8.897vi, 4.7348rem);
+  --ui-font-size-5: clamp(2.0736rem, -0.2684rem + 5.8551vi, 3.552rem);
+  --ui-font-size-4: clamp(1.728rem, 0.2442rem + 3.7096vi, 2.6647rem);
+  --ui-font-size-3: clamp(1.44rem, 0.5545rem + 2.2139vi, 1.999rem);
+  --ui-font-size-2: clamp(1.2rem, 0.7253rem + 1.1866vi, 1.4996rem);
+  --ui-font-size-1: clamp(1rem, 0.802rem + 0.495vi, 1.125rem);
+  --ui-font-size-0: clamp(0.8333rem, 0.8165rem + 0.0421vi, 0.844rem);
+  --ui-font-size-00: clamp(0.625rem, 0.4531rem + 0.4167vi, 0.75rem);
+}
+
+:where(html) {
+  font-family: var(--ui-font-sans);
+}
+
+:where(html) {
+  color-scheme: light;
+  --ui-text-color-0: var(--ui-color-gray-950);
+  --ui-text-color-1: var(--ui-color-gray-900);
+  --ui-text-color-3: var(--ui-color-gray-800);
+  --ui-text-color-3: var(--ui-color-gray-700);
+  --ui-surface-color-0: var(--ui-color-gray-50);
+  --ui-surface-color-1: var(--ui-color-gray-100);
+  --ui-surface-color-2: var(--ui-color-gray-200);
+  --ui-surface-color-3: var(--ui-color-gray-200);
+  --ui-border-color-0: var(--ui-color-gray-950);
+  --ui-border-color-1: var(--ui-color-gray-900);
+  --ui-border-color-2: var(--ui-color-gray-800);
+  --ui-border-color-3: var(--ui-color-gray-700);
+
+  body {
+    background-color: var(--ui-surface-color-0);
+  }
+
+  color: var(--ui-text-color-1);
+  caret-color: var(--ui-primary-color-600);
+}
+
+@media (prefers-color-scheme: dark) {
+  :where(html) {
+    color-scheme: dark;
+    --ui-text-color-0: var(--ui-color-gray-50);
+    --ui-text-color-1: var(--ui-color-gray-100);
+    --ui-text-color-2: var(--ui-color-gray-200);
+    --ui-text-color-3: var(--ui-color-gray-300);
+    --ui-text-color-3: var(--ui-color-gray-500);
+    --ui-surface-color-0: var(--ui-color-gray-950);
+    --ui-surface-color-1: var(--ui-color-gray-900);
+    --ui-surface-color-2: var(--ui-color-gray-800);
+    --ui-surface-color-3: var(--ui-color-gray-700);
+    --ui-border-color-0: var(--ui-color-gray-100);
+    --ui-border-color-1: var(--ui-color-gray-200);
+    --ui-border-color-2: var(--ui-color-gray-400);
+    --ui-border-color-3: var(--ui-color-gray-600);
+
+    body {
+      background-color: var(--ui-surface-color-0);
+    }
+
+    color: var(--ui-text-color-1);
+    caret-color: var(--ui-primary-color-600);
+
+  }
+}
+
+[class^="ui-text-preset-"] {
+  line-height: var(--ui-line-height);
+}
+
+.ui-text-preset-6 {
+  font-size: var(--ui-font-size-6);
+}
+
+.ui-text-preset-5 {
+  font-size: var(--ui-font-size-5);
+}
+
+.ui-text-preset-4 {
+  font-size: var(--ui-font-size-4);
+}
+
+.ui-text-preset-3 {
+  font-size: var(--ui-font-size-3);
+}
+
+.ui-text-preset-2 {
+  font-size: var(--ui-font-size-2);
+}
+
+.ui-text-preset-1 {
+  font-size: var(--ui-font-size-1);
+}
+
+.ui-text-preset-0 {
+  font-size: var(--ui-font-size-0);
+}
+
+.ui-text-preset-00 {
+  font-size: var(--ui-font-size-00);
+}
+
+.ui-text-preset-bold {
+  font-weight: 700;
+}
+
+.ui-scroll-lock {
+  scrollbar-gutter: stable !important;
+  overflow: hidden !important;
+}
+
+.ui-hstack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.ui-vstack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.ui-gap-1 {
+  gap: var(--ui-space-1);
+}
+
+.ui-gap-2 {
+  gap: var(--ui-space-2);
+}
+
+.ui-gap-3 {
+  gap: var(--ui-space-3);
+}
+
+.ui-gap-4 {
+  gap: var(--ui-space-4);
+}
+
+.ui-gap-5 {
+  gap: var(--ui-space-5);
+}
+
+.ui-gap-6 {
+  gap: var(--ui-space-6);
+}
+
+.ui-gap-7 {
+  gap: var(--ui-space-7);
+}
+
+.ui-gap-8 {
+  gap: var(--ui-space-8);
+}
+
+/* *:invalid::after {
+  content: none;
+} */
